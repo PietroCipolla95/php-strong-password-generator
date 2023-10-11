@@ -23,9 +23,21 @@ $combined = array_merge($lowercase, $uppercase, $special);
 </head>
 
 <body>
-    <h1>
-        Strong Password Generator
-    </h1>
+
+    <div class="container">
+        <h1 class="text-center my-5">
+            Strong Password Generator
+        </h1>
+
+        <div class="row">
+            <div class="col-12">
+                <form action="getPassword()" method="get">
+                    <input type="text" name="pw_length" id="pw_length">
+                    <input type="submit" value="Generate">
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 
