@@ -1,5 +1,11 @@
 <?php
 
+//length 89
+
+$lowercase = array_flip(range('a', 'z'));
+$uppercase = array_flip(range('A', 'Z'));
+$special = array_flip(str_split(('!@#$%^&*()_+=-}{[}]\|;:<>?/')));
+$combined = array_merge($lowercase, $uppercase, $special);
 
 
 ?>
