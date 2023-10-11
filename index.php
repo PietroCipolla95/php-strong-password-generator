@@ -24,8 +24,8 @@ include './functions.php'
         </h1>
 
         <div class="row">
-            <div class="col-4">
-                <div class="card p-4 py-5 border-0 bg-info">
+            <div class="col-8 m-auto">
+                <div class="card p-4 py-5 border-0 bg-info d-flex align-items-center">
                     <form action="?getPassword" method="get">
                         <input type="number" name="pw_length" id="pw_length">
                         <button type="submit" class="btn btn-dark text-light py-1">Generate</button>
