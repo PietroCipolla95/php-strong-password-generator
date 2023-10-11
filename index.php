@@ -1,12 +1,6 @@
 <?php
 
-//length 89
-
-$lowercase = array_flip(range('a', 'z'));
-$uppercase = array_flip(range('A', 'Z'));
-$special = array_flip(str_split(('!@#$%^&*()_+=-}{[}]\|;:<>?/')));
-$combined = array_merge($lowercase, $uppercase, $special);
-
+include './functions.php'
 
 ?>
 
@@ -32,10 +26,11 @@ $combined = array_merge($lowercase, $uppercase, $special);
         <div class="row">
             <div class="col-4">
                 <div class="card p-4 py-5 border-0 bg-info">
-                    <form action="getPassword()" method="get">
-                        <input type="text" name="pw_length" id="pw_length">
-                        <input type="submit" value="Generate">
+                    <form action="?getPassword" method="get">
+                        <input type="number" name="pw_length" id="pw_length">
+                        <button type="submit" class="btn btn-dark text-light py-1">Generate</button>
                     </form>
+                    <span class="pt-4 fw-semibold">Your password: <?php echo getPassword($pw_length); ?></span>
                 </div>
             </div>
         </div>
